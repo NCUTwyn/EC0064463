@@ -5,11 +5,11 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import copy
 
-BA = np.load('WS.npy')
+BA = np.load('BA.npy')
 ba = nx.DiGraph(BA)
 theNET=ba
 #b=1.5
-eps = 0.02
+eps = 0.4
 theta=1
 alpha = 0.5
 gamma = 0.7
@@ -208,4 +208,4 @@ print(oldc_ratio)
 # name = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12']
 c = pd.DataFrame(columns=None, data=oldc_ratio)
 print(c)
-c.to_csv('D:/111111111研三论文/令epsilon等于002代码的数据/Max-plus/Max-plus-图2-WS-b.csv')
+c.to_csv('D:/111111111研三论文/更改epsilon之后的数据/Maxplus/Maxplus-0-4-图2-BA-b-200次.csv')

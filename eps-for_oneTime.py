@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 import copy
 
 BA = np.load('BA.npy')
-ba = nx.DiGraph(BA)#nx.random_graphs.barabasi_albert_graph(1000,4)
+ba = nx.DiGraph(BA )
 theNET=ba
 b=1.5
-eps = 0.02
+eps = 0.4
 theta=1
 alpha = 0.5
 gamma = 0.7
@@ -115,7 +115,7 @@ def main_proc(theNET,eps,alpha,gamma):
     oldNodeStates_list=np.array([list(NodeStates.values())])
     # 执行2000次;
     d1=0
-    for i in range(10):
+    for i in range(1000):
         # one loop
         newNStates = copy.deepcopy(NodeStates)  # 新状态，临时变量
         newQtable = copy.deepcopy(QTable)
@@ -170,15 +170,15 @@ if __name__ == "__main__":
 
 print( QTable, oldNodeStates_list,oldc_ratio,d1)
 
-# #name = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18',
-# #
-# oldNodeStates_list=np.column_stack((oldNodeStates_list, oldc_ratio))
-# test = pd.DataFrame(columns=None, data=oldNodeStates_list)
-# print(test)
-# test.to_csv('D:/111111111研三论文/令epsilon等于002代码的数据/eps/eps-0-02-图1-1000次-100个节点.csv')
-# reward=pd.DataFrame(columns=None, data=d1)
-# print(reward)
-# reward.to_csv('D:/111111111研三论文/令epsilon等于002代码的数据/eps/eps-reward-0-02-图1-1000次-100个节点.csv')
+#name = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18',
+#
+oldNodeStates_list=np.column_stack((oldNodeStates_list, oldc_ratio))
+test = pd.DataFrame(columns=None, data=oldNodeStates_list)
+print(test)
+test.to_csv('D:/111111111研三论文/令epsilon等于04代码的数据/eps/eps-0-4-图1-1000次-100个节点.csv')
+#reward=pd.DataFrame(columns=None, data=d1)
+#print(reward)
+#reward.to_csv('D:/111111111研三论文/更改epsilon之后的数据/eps/eps-0-4-reward-图1-1000次-100个节点.csv')
 
 
 

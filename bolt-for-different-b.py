@@ -91,7 +91,7 @@ def main_proc(theNET,alpha,gamma):
         # 初始状态的矩阵
         oldNodeStates_list = np.array([list(NodeStates.values())])
         # 执行2000次;
-        for i in range(100):
+        for i in range(200):
             # one loop
             t = i
             lanmuta = 5 * 0.9999 ** t
@@ -140,4 +140,4 @@ print(oldc_ratio)
 #name = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12']
 c= pd.DataFrame(columns=None, data=oldc_ratio)
 print(c)
-c.to_csv('D:/111111111研三论文/更改之后的数据/Boltzamn/Boltzamn-图2-RG-b.csv')
+c.to_csv('D:/111111111研三论文/更改epsilon之后的数据/Boltzman/Boltzman-0-4-图2-BA-b.csv')

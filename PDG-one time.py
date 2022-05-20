@@ -139,8 +139,8 @@ print( oldNodeStates_list,oldc_ratio)
 #
 oldNodeStates_list=np.column_stack((oldNodeStates_list, oldc_ratio))
 test = pd.DataFrame(columns=None, data=oldNodeStates_list)
-#print(test)
-test.to_csv('D:/111111111研三论文/上个论文实验数据100个节点数据/图1-BA-b-1-1000次次.csv')
+print(test)
+test.to_csv('D:/111111111研三论文/更改epsilon之后的数据/pdg/图1-BA-b-1-5-1000次次.csv')
 
 
 

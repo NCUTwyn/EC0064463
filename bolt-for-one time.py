@@ -151,9 +151,9 @@ print(QTable,  oldNodeStates_list, oldc_ratio,d1)
 oldNodeStates_list=np.column_stack((oldNodeStates_list, oldc_ratio))
 test = pd.DataFrame(columns=None, data=oldNodeStates_list)
 print(test)
-test.to_csv('D:/111111111研三论文/令epsilon等于002代码的数据/Boltzamn/Boltzamn-0-02-BA-图1-1000次-100个节点.csv')
-#
-# reward=pd.DataFrame(columns=None, data=d1)
-# print(reward)
-# reward.to_csv('D:/111111111研三论文/更改之后的数据/Boltzamn/Boltzamn-reward-图1-100次10.csv')
+test.to_csv('D:/111111111研三论文/更改epsilon之后的数据/Boltzman/Boltzman-0-4-BA-图1-1000次-100个节点.csv')
+
+reward=pd.DataFrame(columns=None, data=d1)
+print(reward)
+reward.to_csv('D:/111111111研三论文/更改epsilon之后的数据/Boltzman/Boltzman-0-4-reward-BA-图1-1000次-100个节点.csv')
 

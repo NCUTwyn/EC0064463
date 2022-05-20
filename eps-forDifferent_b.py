@@ -7,7 +7,7 @@ BA = np.load('BA.npy')
 ba = nx.DiGraph(BA)
 theNET=ba
 theta=1
-eps = 0.02
+eps = 0.4
 alpha = 0.5
 gamma = 0.7
 #定义节点是动作
@@ -112,7 +112,7 @@ def main_proc(theNET,eps,alpha,gamma):
         # 初始状态的矩阵
         oldNodeStates_list = np.array([list(NodeStates.values())])
         # 执行2000次;
-        for i in range(100):
+        for i in range(200):
             # one loop
             newNStates = copy.deepcopy(NodeStates)  # 新状态，临时变量
             newQtable = copy.deepcopy(QTable)
@@ -159,6 +159,6 @@ print(oldc_ratio)
 #name = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12']
 c= pd.DataFrame(columns=None, data=oldc_ratio)
 print(c)
-c.to_csv('D:/111111111研三论文/更改之后的数据/eps/eps-图2-BA-b-epsilon2.csv')
+c.to_csv('D:/111111111研三论文/更改epsilon之后的数据/eps/eps-0-4-图2-BA-b.csv')
 
 
